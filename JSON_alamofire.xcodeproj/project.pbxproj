@@ -15,7 +15,6 @@
 		CD58BF1127E34490006549BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD58BF0F27E34490006549BA /* LaunchScreen.storyboard */; };
 		CD58BF1927E344B3006549BA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD58BF1827E344B3006549BA /* NetworkManager.swift */; };
 		CD58BF1B27E344D4006549BA /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD58BF1A27E344D4006549BA /* Drink.swift */; };
-		CD58BF1D27E344E4006549BA /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD58BF1C27E344E4006549BA /* TableViewCell.swift */; };
 		CD58BF2827E34953006549BA /* DrinkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD58BF2727E34953006549BA /* DrinkTableViewController.swift */; };
 		CD58BF2B27E34AB4006549BA /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD58BF2A27E34AB4006549BA /* RecipeViewController.swift */; };
 /* End PBXBuildFile section */
@@ -32,7 +31,6 @@
 		CD58BF1227E34490006549BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD58BF1827E344B3006549BA /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		CD58BF1A27E344D4006549BA /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
-		CD58BF1C27E344E4006549BA /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		CD58BF2727E34953006549BA /* DrinkTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkTableViewController.swift; sourceTree = "<group>"; };
 		CD58BF2A27E34AB4006549BA /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 		D8B63C561E4BC11B8A08B90F /* Pods-JSON_alamofire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSON_alamofire.debug.xcconfig"; path = "Target Support Files/Pods-JSON_alamofire/Pods-JSON_alamofire.debug.xcconfig"; sourceTree = "<group>"; };
@@ -88,7 +86,6 @@
 		CD58BF0327E3448E006549BA /* JSON_alamofire */ = {
 			isa = PBXGroup;
 			children = (
-				CD58BF2227E345AA006549BA /* Views */,
 				CD58BF2327E345CA006549BA /* ViewControllers */,
 				CD58BF2427E345ED006549BA /* StoryBords */,
 				CD58BF2027E3458E006549BA /* NetworkManager */,
@@ -113,14 +110,6 @@
 				CD58BF1A27E344D4006549BA /* Drink.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		CD58BF2227E345AA006549BA /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				CD58BF1C27E344E4006549BA /* TableViewCell.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		CD58BF2327E345CA006549BA /* ViewControllers */ = {
@@ -278,7 +267,6 @@
 				CD58BF2827E34953006549BA /* DrinkTableViewController.swift in Sources */,
 				CD58BF2B27E34AB4006549BA /* RecipeViewController.swift in Sources */,
 				CD58BF0527E3448E006549BA /* AppDelegate.swift in Sources */,
-				CD58BF1D27E344E4006549BA /* TableViewCell.swift in Sources */,
 				CD58BF1B27E344D4006549BA /* Drink.swift in Sources */,
 				CD58BF0727E3448E006549BA /* SceneDelegate.swift in Sources */,
 			);

@@ -124,6 +124,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9Rh-c8-wsA"/>
+                    <connections>
+                        <outlet property="alcoholLabel" destination="xQg-cd-l2j" id="H4O-zF-K2J"/>
+                        <outlet property="drinkLabel" destination="FyV-IY-YAg" id="Sa5-TB-u7M"/>
+                        <outlet property="glassLabel" destination="KgI-7M-mFh" id="MTK-5y-Ltk"/>
+                        <outlet property="imageView" destination="t3p-U6-Jyu" id="OA3-uD-HUP"/>
+                        <outlet property="recipeTextView" destination="Jw1-oG-40N" id="3JP-Tb-dII"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PQY-fd-ac8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -138,30 +145,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="KCX-A2-3UA" customClass="TableViewCell" customModule="JSON_alamofire" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.5" width="320" height="46.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="9Rl-M8-pmL" detailTextLabel="hGB-e8-rdR" style="IBUITableViewCellStyleValue2" id="KCX-A2-3UA" customClass="TableViewCell" customModule="JSON_alamofire" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="320" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" semanticContentAttribute="spatial" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KCX-A2-3UA" id="LcW-pE-eEp">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="46.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EbS-6z-Aay">
-                                            <rect key="frame" x="16" y="11" width="288" height="24.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9Rl-M8-pmL">
+                                            <rect key="frame" x="16" y="15" width="91" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hGB-e8-rdR">
+                                            <rect key="frame" x="113" y="15" width="33" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstItem="EbS-6z-Aay" firstAttribute="top" secondItem="LcW-pE-eEp" secondAttribute="topMargin" id="UNo-mr-FTP"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="EbS-6z-Aay" secondAttribute="trailing" id="YWq-sb-4yQ"/>
-                                        <constraint firstItem="EbS-6z-Aay" firstAttribute="leading" secondItem="LcW-pE-eEp" secondAttribute="leadingMargin" id="exI-it-DpW"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="EbS-6z-Aay" secondAttribute="bottom" id="mOv-AZ-oGx"/>
-                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="drinkLabel" destination="EbS-6z-Aay" id="i76-om-n3t"/>
-                                    <segue destination="Fff-tH-kHN" kind="show" identifier="cell" id="khz-DM-8di"/>
+                                    <segue destination="Fff-tH-kHN" kind="show" identifier="recipe" id="khz-DM-8di"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

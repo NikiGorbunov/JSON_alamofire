@@ -9,7 +9,7 @@ import UIKit
 
 class DrinkTableViewController: UITableViewController {
     
-    private var drink: [Cocktail] = []
+    private var drink: Drink?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,21 +20,32 @@ class DrinkTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        drink.count
+        drink?.drinks.count ?? 0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
-        let recipe = drink[indexPath.row]
-        cell.configure(with: recipe)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let recipe = drink?.drinks[indexPath.row]
+        var content = cell.defaultContentConfiguration()
+        
+        content.text = recipe?.strDrink
+        
+        cell.contentConfiguration = content
 
         return cell
     }
     
-    // MARK: - Navigation
+// MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let indexPath = tableView.indexPathForSelectedRow {
+            let cocktails = drink?.drinks[indexPath.row]
+            let recipeVC = segue.destination as! RecipeViewController
+            recipeVC.cocktail = cocktails
+        }
     }
+    
+// MARK: - Networking
     
     func fetchData(from url: String) {
         NetworkManager.shared.fetchDataWithAlamofire(url) { result in
@@ -45,7 +56,6 @@ class DrinkTableViewController: UITableViewController {
             case .failure(let error):
                 print(error)
             }
-
         }
     }
 }
